@@ -3,7 +3,14 @@
 */
 
 type Page = {
-  [key: string]: any;
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  }
 }
 
 const page1: Page = {

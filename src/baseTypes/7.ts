@@ -3,12 +3,18 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
-enum customDate {
-  date = new Date().getDay(),
+enum DayOfWeek {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
 }
 
-function isWeekend(date: customDate): boolean {
-  if (date === 0 || date === 6)
+function isWeekend(date: DayOfWeek): boolean {
+  if (date === DayOfWeek.Saturday || date === DayOfWeek.Sunday)
     return true;
   return false;
 }
